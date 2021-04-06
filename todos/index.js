@@ -52,8 +52,7 @@ class Todos {
     }
        
 
-/* Callback to enable, remove .promises from the require('fs').promises;
-   Remember to adjust index.test.js
+/* saveToFile() : Callback
     saveToFile(callback) {
         let fileContents = 'Title,Completed\n';
         this.todos.forEach((todo) => {

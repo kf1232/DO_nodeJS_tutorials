@@ -56,7 +56,6 @@ describe("saveToFile()", function() {
     });
 });
    
-
 /* saveToFile() : Promise
 describe("saveToFile()", function() {
         it("should save a single TODO", function() {
@@ -73,7 +72,6 @@ describe("saveToFile()", function() {
 */
 
 /* saveToFile() : Callback
-   remember to adjust index.js
 describe("saveToFile()", function() {
     it("should save a single TODO via callback", function(done) {
         let todos = new Todos();
@@ -88,5 +86,3 @@ describe("saveToFile()", function() {
     });
 });
 */
-
-
