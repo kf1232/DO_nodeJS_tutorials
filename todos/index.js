@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
 class Todos {
     constructor() {
@@ -42,6 +42,18 @@ class Todos {
         }
     }
 
+    saveToFile() {
+        let fileContents = 'Title,Completed\n';
+        this.todos.forEach((todo) => {
+            fileContents += `${todo.title},${todo.completed}\n`
+        });
+
+        return fs.writeFile('todos.csv', fileContents);
+    }
+       
+
+/* Callback to enable, remove .promises from the require('fs').promises;
+   Remember to adjust index.test.js
     saveToFile(callback) {
         let fileContents = 'Title,Completed\n';
         this.todos.forEach((todo) => {
@@ -50,6 +62,7 @@ class Todos {
 
         fs.writeFile('file_callback.csv', fileContents, callback);
     }
+*/
 }
    
 module.exports = Todos;

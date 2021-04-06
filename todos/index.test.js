@@ -43,6 +43,37 @@ describe("complete()", function() {
     });
 });
 
+// saveToFile() : async/await
+describe("saveToFile()", function() {
+    it("should save a single TODO", async function() {
+        let todos = new Todos();
+        todos.add("save a CSV");
+        await todos.saveToFile();
+            assert.strictEqual(fs.existsSync('todos.csv'), true);
+            let expectedFileContents = "Title,Completed\nsave a CSV,false\n";
+            let content = fs.readFileSync("todos.csv").toString();
+            assert.strictEqual(content, expectedFileContents);
+    });
+});
+   
+
+/* saveToFile() : Promise
+describe("saveToFile()", function() {
+        it("should save a single TODO", function() {
+            let todos = new Todos();
+            todos.add("save a CSV");
+            return todos.saveToFile().then(() => {
+                assert.strictEqual(fs.existsSync('todos.csv'), true);
+                let expectedFileContents = "Title,Completed\nsave a CSV,false\n";
+                let content = fs.readFileSync("todos.csv").toString();
+                assert.strictEqual(content, expectedFileContents);
+        });
+    });
+});
+*/
+
+/* saveToFile() : Callback
+   remember to adjust index.js
 describe("saveToFile()", function() {
     it("should save a single TODO via callback", function(done) {
         let todos = new Todos();
@@ -56,4 +87,6 @@ describe("saveToFile()", function() {
         });
     });
 });
+*/
+
 
