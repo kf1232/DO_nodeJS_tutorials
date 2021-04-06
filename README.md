@@ -1,4 +1,4 @@
-### Project Header
+# Project Header
 
 ## Project Description
 
