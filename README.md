@@ -1,12 +1,17 @@
-# Project Header
+[I'm an inline-style link](https://www.google.com)
 
-#### Project Description
-    Test projects based off the tutorials within Digital Oceans nodeJS workbooks
-    [Digital Ocean nodeJS][1]
-    [I'm an inline-style link](https://www.google.com)
-#### Project Commands
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-#### Project Other
+[You can use numbers for reference-style link definitions][1]
 
+Or leave it empty and use the [link text itself]
 
-[1]: https://assets.digitalocean.com/books/how-to-code-in-nodejs.pdf
+URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or <http://www.example.com> and sometimes 
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
