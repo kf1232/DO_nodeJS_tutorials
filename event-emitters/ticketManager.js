@@ -3,7 +3,7 @@ const EventEmitter = require("events");
 class TicketManager extends EventEmitter {
     constructor(supply){
         super();
-        thjis.supply = supply;
+        this.supply = supply;
     }
 
     buy(email, price) {
